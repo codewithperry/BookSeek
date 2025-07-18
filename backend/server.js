@@ -6,6 +6,10 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 
+app.get("/ping", async(req,res) => {
+  res.send("pong");
+}
+
 app.get("/api/books", async (req, res) => {
   const { bookname } = req.query;
 
