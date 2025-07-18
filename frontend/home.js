@@ -51,4 +51,10 @@ async function main() {
     results.textContent = "No books found.";
   }
 }
-main();
+
+
+if (userQuery) {
+
+  main();
+}
+
