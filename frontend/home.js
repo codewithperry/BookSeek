@@ -1,4 +1,4 @@
-const KEY = "your-api-key";  // ← replace with your own valid key
+
 q = window.location.search;
 
 value = new URLSearchParams(q)
@@ -7,7 +7,8 @@ userQuery = encodeURIComponent(reqValue)
 
 
 async function main() {
-  const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${userQuery}&key=${KEY}`);
+  const response = await fetch("https://bookseekbackend.onrender.com/api/books?bookname=" + query);
+
   const data = await response.json();
   const results = document.querySelector('.feed');
 
