@@ -7,7 +7,7 @@ userQuery = encodeURIComponent(reqValue)
 
 
 async function main() {
-  const response = await fetch("https://bookseekbackend.onrender.com/api/books?bookname=" + query);
+  const response = await fetch("https://bookseekbackend.onrender.com/api/books?bookname=" + userQuery);
 
   const data = await response.json();
   const results = document.querySelector('.feed');
